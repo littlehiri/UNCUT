@@ -12911,6 +12911,22 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 6808426640854048748, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808426641281950821, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808426641281950821, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808426641281950821, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 6808426641740819597, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -12958,10 +12974,6 @@ PrefabInstance:
     - target: {fileID: 6808426641740819599, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
       propertyPath: m_Name
       value: Personaje
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808426641740819602, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
-      propertyPath: m_Time
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

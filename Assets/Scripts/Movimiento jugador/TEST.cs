@@ -49,9 +49,7 @@ public class TEST : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            GameObject bullet = Instantiate(bulletPrefab);
-            bullet.transform.position = spawner.position;
-            bullet.transform.rotation = lanza.transform.rotation;
+            GameObject bullet = Instantiate(bulletPrefab, spawner.position, bulletPrefab.transform.rotation);
             Destroy(bullet, 2f);
         }
 

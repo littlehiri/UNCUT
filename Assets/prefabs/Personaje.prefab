@@ -238,7 +238,7 @@ MonoBehaviour:
   isGrounded: 1
   knockBackLength: 0.2
   knockBackForce: 8
-  slideForce: 0
+  slideForce: -1
   theRB: {fileID: 6808426641740819603}
   groundCheckPoint: {fileID: 6808426642502415150}
   whatIsGround:
@@ -259,7 +259,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: 0}
+  m_Offset: {x: 0.1, y: -0.05}
   m_Size: {x: 0.25, y: 1.5}
   m_Direction: 0
 --- !u!50 &6808426641740819603
@@ -325,7 +325,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 3
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
