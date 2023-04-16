@@ -139,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6808426641740819597}
   - component: {fileID: 6808426641740819596}
+  - component: {fileID: 1918052931459015725}
   - component: {fileID: 6808426641740819601}
   - component: {fileID: 6808426641740819600}
   - component: {fileID: 6808426641740819603}
@@ -220,6 +221,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1918052931459015725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6808426641740819599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df47794a3c30a6544ba1773797495a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 3
+  invincibleLength: 1
 --- !u!114 &6808426641740819601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,15 +255,15 @@ MonoBehaviour:
   stopInput: 0
   reference: {fileID: 0}
   knockBackLength: 0.2
-  knockBackForce: 8
-  slideForce: -1
+  knockBackForce: 4
+  slideForce: -0.8
   theRB: {fileID: 6808426641740819603}
   groundCheckPoint: {fileID: 6808426642502415150}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   tr: {fileID: 6808426641740819602}
-  theSR: {fileID: 0}
+  theSR: {fileID: 6808426641740819596}
 --- !u!70 &6808426641740819600
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

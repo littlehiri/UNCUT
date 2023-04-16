@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         //Ocultamos el cartel de haber finalizado el nivel
-        UIController.sharedInstance.levelCompleteText.gameObject.SetActive(false);
+        //UIController.sharedInstance.levelCompleteText.gameObject.SetActive(false);
         //Inicializamos el tiempo hecho en el nivel
         timeInLevel = 0f;
     }
