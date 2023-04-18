@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public static EnemyController sharedInstance;
+
+    private void Awake()
+    {
+        if (sharedInstance == null)
+        {
+            sharedInstance = this;
+        }
+    }
+
     //Velocidad del enemigo
     public float moveSpeed;
 
@@ -24,6 +34,9 @@ public class EnemyController : MonoBehaviour
     //Referencia al Animator del enemigo
     private Animator anim;
 
+    public float knockBackLength, knockBackForce; //Valor que tendrá el contador de KnockBack, y la fuerza de KnockBack
+    private float knockBackCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +55,13 @@ public class EnemyController : MonoBehaviour
         movingRight = true;
         //Inicializamos el contador de tiempo de movimiento
         moveCount = moveTime;
+    }
+    public void KnockBack()
+    {
+        //Inicializar el contador de KnockBack
+        knockBackCounter = knockBackLength;
+        //Paralizamos en X al jugador y hacemos que salte en Y
+        theRB.velocity = new Vector2(0f, knockBackForce);
     }
 
     // Update is called once per frame
