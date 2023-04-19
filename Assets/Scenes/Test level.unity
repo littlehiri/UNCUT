@@ -6163,7 +6163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932537729, guid: 4ef43b92089f12c4592e127ce1b7a45d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1858265240, guid: 4ef43b92089f12c4592e127ce1b7a45d, type: 3}
       propertyPath: m_IsActive
@@ -6203,7 +6203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4879981980630800639, guid: 4ef43b92089f12c4592e127ce1b7a45d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4879981980630800639, guid: 4ef43b92089f12c4592e127ce1b7a45d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -56426,12 +56426,20 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6581655478060451357, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.62023497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581655478060451357, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.71408087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581655478060451357, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.1137
+      value: -17.37
       objectReference: {fileID: 0}
     - target: {fileID: 6581655478060451357, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9
+      value: -2.83
       objectReference: {fileID: 0}
     - target: {fileID: 6581655478060451357, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56465,6 +56473,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6581655478060451358, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1380887149, guid: 4e0cb4b84015cd64aab7576b684fdbe8, type: 3}
     - target: {fileID: 6581655478060451359, guid: 754c59dfd3702554e81b476c19c4fbd5, type: 3}
       propertyPath: m_Name
       value: Checkpoint
