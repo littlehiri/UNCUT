@@ -143,6 +143,27 @@ TextureImporter:
       name: Enemigos_1
       rect:
         serializedVersion: 2
+        x: 68
+        y: 133
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c71448731214b41a105a358d685b63
+      internalID: 469755574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_2
+      rect:
+        serializedVersion: 2
         x: 98
         y: 130
         width: 11
@@ -154,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42c71448731214b41a105a358d685b63
-      internalID: 469755574
+      spriteID: 292818aa6bf45b04abf8c3b22885c27f
+      internalID: 1651685148
       vertices: []
       indices: 
       edges: []
@@ -171,6 +192,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Enemigos_2: 1651685148
       Enemigos_0: 171006515
       Enemigos_1: 469755574
   spritePackingTag: 
