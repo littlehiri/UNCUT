@@ -21,7 +21,7 @@ public class DamagePlayer : MonoBehaviour
         //Comprobamos si es el jugador el que ha entrado en esa zona de trigger
         if (collision.gameObject.CompareTag("Player"))
         {
-            
+            Debug.Log("hola");
             //Buscará un objeto que tenga metido el script PlayerHealthController y realizará el método DealWithDamage
             //FindObjectOfType<PlayerHealthController>().DealWithDamage();
 
@@ -29,6 +29,21 @@ public class DamagePlayer : MonoBehaviour
             //PlayerHealthController.sharedInstance.DealWithDamage();
 
             collision.GetComponent<PlayerHealthController>().DealWithDamage();
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Comprobamos si es el jugador el que ha entrado en esa zona de trigger
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("hola");
+            //Buscará un objeto que tenga metido el script PlayerHealthController y realizará el método DealWithDamage
+            //FindObjectOfType<PlayerHealthController>().DealWithDamage();
+
+            //Llamamos al Singleton y usamos el método que necesitamos
+            //PlayerHealthController.sharedInstance.DealWithDamage();
+
+            collision.gameObject.GetComponent<PlayerHealthController>().DealWithDamage();
         }
     }
 }
