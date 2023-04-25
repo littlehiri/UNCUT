@@ -80,6 +80,7 @@ public class TEST : MonoBehaviour
                     {
                         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                         canDoubleJump = true;
+                        AudioManager.sharedInstance.PlaySFX(0);
                     }
                     else
                     {
@@ -87,6 +88,7 @@ public class TEST : MonoBehaviour
                         {
                             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                             canDoubleJump = false;
+                            AudioManager.sharedInstance.PlaySFX(0);
                         }
                     }
                 }

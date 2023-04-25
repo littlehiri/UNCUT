@@ -58,7 +58,7 @@ public class PlayerHealthController : MonoBehaviour
     //Método para manejar el daño
     public void DealWithDamage()
     {
-        
+        AudioManager.sharedInstance.PlaySFX(3);
         //Si el contador de tiempo de invencibilidad se ha agotado, es decir, ya no somos invencibles
         if (invincibleCounter <= 0)
         {

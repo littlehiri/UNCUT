@@ -35,5 +35,6 @@ public class Shooting : MonoBehaviour
     void shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        AudioManager.sharedInstance.PlaySFX(2);
     }
 }
