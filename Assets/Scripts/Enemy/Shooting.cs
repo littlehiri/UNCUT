@@ -8,7 +8,7 @@ public class Shooting : MonoBehaviour
     public Transform bulletPos;
 
     private float timer;
-    private GameObject player;
+    public GameObject player;
     private void Start()
     {
         
@@ -16,8 +16,6 @@ public class Shooting : MonoBehaviour
 
     private void Update()
     {
-        
-
         float distance = Vector2.Distance(transform.position, player.transform.position);
         Debug.Log(distance);
 
