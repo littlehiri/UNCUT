@@ -27,10 +27,17 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<EnemyHealthController>().DealWithDamage();
+            Destroy(gameObject);
+        }
+
         Destroy(gameObject);
     }
+
 
     void FixedUpdate()
     {

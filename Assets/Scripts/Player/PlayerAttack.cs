@@ -23,6 +23,8 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Attack();
+
+            AudioManager.sharedInstance.PlaySFX(4);
         }
 
         if (attacking)

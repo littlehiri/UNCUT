@@ -39,5 +39,7 @@ public class EnemyBulletScript : MonoBehaviour
             other.gameObject.GetComponent<PlayerHealthController>().DealWithDamage();
             Destroy(gameObject);
         }
+
+        //Destroy(gameObject);
     }
 }
