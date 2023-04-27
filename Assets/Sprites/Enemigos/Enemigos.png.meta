@@ -122,10 +122,10 @@ TextureImporter:
       name: Enemigos_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 129
-        width: 7
-        height: 18
+        x: 80
+        y: 151
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +143,10 @@ TextureImporter:
       name: Enemigos_1
       rect:
         serializedVersion: 2
-        x: 68
-        y: 133
-        width: 7
-        height: 7
+        x: 107
+        y: 150
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,6 +164,48 @@ TextureImporter:
       name: Enemigos_2
       rect:
         serializedVersion: 2
+        x: 57
+        y: 129
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292818aa6bf45b04abf8c3b22885c27f
+      internalID: 1651685148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 133
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafc9ada472a9d949b76b2a334d56d08
+      internalID: 1362206456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_4
+      rect:
+        serializedVersion: 2
         x: 98
         y: 130
         width: 11
@@ -175,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 292818aa6bf45b04abf8c3b22885c27f
-      internalID: 1651685148
+      spriteID: c3d06c37f695b24418736afe17e02c02
+      internalID: -350214593
       vertices: []
       indices: 
       edges: []
@@ -193,6 +235,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Enemigos_2: 1651685148
+      Enemigos_4: -350214593
+      Enemigos_3: 1362206456
       Enemigos_0: 171006515
       Enemigos_1: 469755574
   spritePackingTag: 
