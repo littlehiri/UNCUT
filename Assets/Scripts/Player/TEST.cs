@@ -34,6 +34,9 @@ public class TEST : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = .5f;
 
+    public float cooldownTime = 20;
+    private float nextFireTime = 0;
+
     [SerializeField] private Rigidbody2D theRB;
     [SerializeField] private Transform groundCheckPoint;
     [SerializeField] private LayerMask whatIsGround;
@@ -50,20 +53,29 @@ public class TEST : MonoBehaviour
         }
     }
 
+
     void Update()
     {
+        if (Time.time > nextFireTime)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+               
+                GameObject bullet = Instantiate(bulletPrefab, spawner.position, bulletPrefab.transform.rotation);
+                nextFireTime = Time.time + cooldownTime;
+                Destroy(bullet, 2f);
+                
+            }
+
+        }
+
         //Si el juego está pausado, no funciona el movimiento. Tampoco si el jugador está parado
         if (!reference.isPaused && !stopInput)
         {
             //Si el contador de KnockBack se ha vaciado, el jugador recupera el control del movimiento
             if (knockBackCounter <= 0)
             {
-
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                  GameObject bullet = Instantiate(bulletPrefab, spawner.position, bulletPrefab.transform.rotation);
-                  Destroy(bullet, 2f);
-                }
+                
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
@@ -132,6 +144,8 @@ public class TEST : MonoBehaviour
             }
         }
     }
+
+    
 
     private void FixedUpdate()
     {
