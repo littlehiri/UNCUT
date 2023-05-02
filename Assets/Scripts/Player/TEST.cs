@@ -34,7 +34,7 @@ public class TEST : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = .5f;
 
-    public float cooldownTime = 20;
+    public float cooldownTime = 2;
     private float nextFireTime = 0;
 
     [SerializeField] private Rigidbody2D theRB;
@@ -47,27 +47,38 @@ public class TEST : MonoBehaviour
 
     private void Awake()
     {
+        
+
         if (sharedInstance == null)
         {
             sharedInstance = this;
         }
     }
 
-
+    private void Start()
+    {
+        nextFireTime = 2;
+        Debug.Log(nextFireTime);
+    }
     void Update()
     {
-        if (Time.time > nextFireTime)
+        
+        if (nextFireTime <= 0)
         {
+           
             if (Input.GetKeyDown(KeyCode.Q))
             {
-               
+
                 GameObject bullet = Instantiate(bulletPrefab, spawner.position, bulletPrefab.transform.rotation);
-                nextFireTime = Time.time + cooldownTime;
+
+                nextFireTime = 2;
                 Destroy(bullet, 2f);
-                
+
             }
 
         }
+        else
+            nextFireTime -= Time.deltaTime;
 
         //Si el juego está pausado, no funciona el movimiento. Tampoco si el jugador está parado
         if (!reference.isPaused && !stopInput)
