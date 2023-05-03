@@ -1924,7 +1924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57663779}
   - component: {fileID: 57663778}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Tileset_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6804,7 +6804,6 @@ GameObject:
   m_Component:
   - component: {fileID: 152995763}
   - component: {fileID: 152995766}
-  - component: {fileID: 152995765}
   - component: {fileID: 152995764}
   m_Layer: 7
   m_Name: Rope
@@ -6840,7 +6839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a269b9872b27344b05590809599c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grapplingGun: {fileID: 152995765}
+  grapplingGun: {fileID: 464470501}
   m_lineRenderer: {fileID: 152995766}
   percision: 40
   straightenLineSpeed: 5
@@ -6848,59 +6847,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0025041401
+      time: 0
       value: 0
-      inSlope: -2.436432
-      outSlope: -2.436432
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.21739197
-      value: -0.5235596
-      inSlope: 0.1790638
-      outSlope: 0.1790638
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.45158318
-      value: 0.1309017
-      inSlope: -0.4362911
-      outSlope: -0.4362911
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.2659344
-    - serializedVersion: 3
-      time: 0.6428559
-      value: -0.32097512
-      inSlope: 4.2831826
-      outSlope: 4.2831826
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.86337197
-      value: 0.7132772
-      inSlope: -0.14023137
-      outSlope: -0.14023137
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.0037842
-      value: 0.015343212
-      inSlope: -4.9706078
-      outSlope: -4.9706078
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -6931,39 +6894,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   ropeProgressionSpeed: 6.7
   isGrappling: 1
---- !u!114 &152995765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152995762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4a8a388db060a40949a74ccff422a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grappleRope: {fileID: 152995764}
-  grappleToAll: 0
-  grappableLayerNumber: 9
-  m_camera: {fileID: 519420031}
-  gunHolder: {fileID: 2060737787}
-  gunPivot: {fileID: 464470499}
-  firePoint: {fileID: 683680514}
-  m_springJoint2D: {fileID: 2060737788}
-  m_rigidbody: {fileID: 2060737790}
-  rotateOverTime: 1
-  rotationSpeed: 4
-  hasMaxDistance: 1
-  maxDistnace: 6
-  launchToPoint: 1
-  launchType: 0
-  launchSpeed: 3
-  autoConfigureDistance: 0
-  targetDistance: 3
-  targetFrequncy: 1
-  grapplePoint: {x: 0, y: 0}
-  grappleDistanceVector: {x: 0, y: 0}
 --- !u!120 &152995766
 LineRenderer:
   serializedVersion: 2
@@ -7003,9 +6933,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1875026623
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -14202,7 +14132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &392073599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16167,6 +16097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464470499}
   - component: {fileID: 464470500}
+  - component: {fileID: 464470501}
   m_Layer: 7
   m_Name: Daga
   m_TagString: Untagged
@@ -16242,6 +16173,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &464470501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464470498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4a8a388db060a40949a74ccff422a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleRope: {fileID: 152995764}
+  grappleToAll: 0
+  grappableLayerNumber: 9
+  m_camera: {fileID: 519420031}
+  gunHolder: {fileID: 2060737787}
+  gunPivot: {fileID: 464470499}
+  firePoint: {fileID: 683680514}
+  m_springJoint2D: {fileID: 2060737788}
+  m_rigidbody: {fileID: 2060737790}
+  rotateOverTime: 1
+  rotationSpeed: 60
+  hasMaxDistance: 0
+  maxDistnace: 6
+  launchToPoint: 1
+  launchType: 0
+  launchSpeed: 3
+  autoConfigureDistance: 0
+  targetDistance: 3
+  targetFrequncy: 1
+  grapplePoint: {x: 0, y: 0}
+  grappleDistanceVector: {x: 0, y: 0}
 --- !u!1 &472459315
 GameObject:
   m_ObjectHideFlags: 0
@@ -22156,7 +22120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683680513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.632, y: 0.186, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27823,7 +27787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &881202604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29091,27 +29055,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &910488070
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!61 &910488070
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910488067}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &914517803
 GameObject:
   m_ObjectHideFlags: 0
@@ -53596,7 +53565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680690579}
   - component: {fileID: 1680690578}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Tileset_7 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56758,7 +56727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799004198}
   - component: {fileID: 1799004197}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Tileset_8 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67402,6 +67371,10 @@ PrefabInstance:
     - target: {fileID: 3611044659036405129, guid: 5adb4cbee51317c47ad2c0a275da3034, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611044659036405129, guid: 5adb4cbee51317c47ad2c0a275da3034, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
