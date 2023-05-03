@@ -58,7 +58,7 @@ public class TEST : MonoBehaviour
     private void Start()
     {
         nextFireTime = 2;
-        Debug.Log(nextFireTime);
+        //Debug.Log(nextFireTime);
     }
     void Update()
     {
