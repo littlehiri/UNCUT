@@ -118,4 +118,23 @@ public class PlayerHealthController : MonoBehaviour
         //Actualizamos la UI
         UIController.sharedInstance.UpdateHealthDisplay();
     }
+
+    public void UpgradeHealthPlayer()
+    {
+        //Curamos al jugador a su vida máxima
+        //currentHealth = maxHealth;
+
+        //Sumamos 1 a la vida del jugador
+        maxHealth = 4;
+
+        currentHealth = maxHealth;
+
+        if (maxHealth == 4)
+        {
+            UIController.sharedInstance.heart4.gameObject.SetActive(true);
+            UIController.sharedInstance.heart5.gameObject.SetActive(true);
+            UIController.sharedInstance.heart3.gameObject.SetActive(false);
+        }
+        UIController.sharedInstance.UpdateHealthDisplay();
+    }
 }
