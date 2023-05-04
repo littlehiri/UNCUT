@@ -16,6 +16,9 @@ public class TEST : MonoBehaviour
     public bool isGrounded;
     private bool canDoubleJump;
 
+    //Variable para saber cuando el jugador puede interactuar con los objetos
+    public bool canInteract = false;
+
     //Variable para detener al jugador
     public bool stopInput;
 
@@ -214,6 +217,14 @@ public class TEST : MonoBehaviour
             animator.SetFloat("Speed", 0f);
         }
 
+       
+
+        if (isDashing)
+        {
+            return;
+        }
+
+        theRB.velocity = new Vector2(horizontal * speed, theRB.velocity.y);
         //if (!isSwinging)
         //{
         if (!isGrounded) return;
@@ -225,12 +236,9 @@ public class TEST : MonoBehaviour
             //}
         //}
 
-        if (isDashing)
-        {
-            return;
-        }
+        
 
-        theRB.velocity = new Vector2(horizontal * speed, theRB.velocity.y);
+        
     }
     public void StopPlayer()
     {
