@@ -17,6 +17,11 @@ public class DamageEnemy : MonoBehaviour
             //PlayerHealthController.sharedInstance.DealWithDamage();
 
             collision.GetComponent<EnemyHealthController>().DealWithDamage();
+
+        }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            collision.GetComponent<BossHealthController>().DealWithDamage();
         }
     }
 }

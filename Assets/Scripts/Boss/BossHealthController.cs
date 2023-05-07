@@ -1,0 +1,108 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BossHealthController : MonoBehaviour
+{
+    //Variables para controlar la vida actual del jugador y el máximo de vida que puede tener
+    public int currentHealth, maxHealth;
+
+    //Referencia del SpriteRenderer del jugador
+    private SpriteRenderer theSR;
+    public float invincibleLength; //Valor que tendrá el contador de tiempo
+    private float invincibleCounter; //Contador de tiempo
+    //Variable para conocer si el enemigo ha sido derrotado
+    private bool isDefeated;
+    //Posición del Boss
+    public Transform theBoss;
+    public GameObject winPlatform;
+
+    //La referencia del efecto de muerte del jugador
+    //public GameObject deathEffect;
+
+    //Hacemos el Singleton de este script
+    public static BossHealthController sharedInstance;
+
+    private void Awake()
+    {
+        if (sharedInstance == null)
+        {
+            sharedInstance = this;
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Inicializamos la vida del jugador
+        currentHealth = maxHealth;
+        //Obtenemos el SpriteRenderer del jugador
+        theSR = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Comprobamos si el contador de invencibilidad aún no está vacío
+        if (invincibleCounter > 0)
+        {
+            //Le restamos 1 cada segundo a ese contador independientemente del dispositivo que ejecute el juego
+            invincibleCounter -= Time.deltaTime;
+
+            //Cuando el contador haya decrecido hasta 0
+            if (invincibleCounter <= 0)
+            {
+                //Cambiamos el color del sprite, mantenemos el RGB y ponemos la opacidad a tope
+                theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, 1f);
+            }
+        }
+    }
+
+    //Método para manejar el daño
+    public void DealWithDamage()
+    {
+        AudioManager.sharedInstance.PlaySFX(5);
+        //Si el contador de tiempo de invencibilidad se ha agotado, es decir, ya no somos invencibles
+        if (invincibleCounter <= 0)
+        {
+
+            //Restamos 1 de la vida que tengamos
+            currentHealth--; //currentHealth -= 1; currentHealth = currentHealth - 1;
+
+            //Si la vida está en 0 o por debajo (para asegurarnos de tener en cuenta solo valores positivos)
+            if (currentHealth <= 0)
+            {
+                //Hacemos cero la vida si fuera negativa
+                currentHealth = 0;
+
+                isDefeated = true;
+
+
+                //Desactivamos al enemigo padre
+                transform.gameObject.SetActive(false);
+            }
+            //Si el jugador ha recibido daño pero no ha muerto
+            else
+            {
+                //Inicializamos el contador de invencibilidad
+                invincibleCounter = invincibleLength;
+                //Cambiamos el color del sprite, mantenemos el RGB y ponemos la opacidad a la mitad
+                //theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, .5f);
+
+                //Llamamos al método que hace que el jugador realice el KnockBack
+                EnemyController.sharedInstance.KnockBack();
+            }
+
+            if (isDefeated)
+            {
+                //Desactivamos al tanque
+                theBoss.gameObject.SetActive(false);
+                //Activamos los objetos tras derrotar al jefe final
+                winPlatform.SetActive(false);
+                //Llamamos al métod que restaura la música del juego
+                AudioManager.sharedInstance.StopBossMusic();
+
+            }
+        }
+    }
+}
