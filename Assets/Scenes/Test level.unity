@@ -99903,6 +99903,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2060737793, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6808426640854048748, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
       propertyPath: camera
       value: 
@@ -99959,7 +99963,8 @@ PrefabInstance:
       propertyPath: reference
       value: 
       objectReference: {fileID: 176967921}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2060737800, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
 --- !u!1001 &7840025097381565171
