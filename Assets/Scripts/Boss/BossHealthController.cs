@@ -93,16 +93,17 @@ public class BossHealthController : MonoBehaviour
                 EnemyController.sharedInstance.KnockBack();
             }
 
-            if (isDefeated)
-            {
-                //Desactivamos al tanque
-                theBoss.gameObject.SetActive(false);
-                //Activamos los objetos tras derrotar al jefe final
-                winPlatform.SetActive(false);
-                //Llamamos al métod que restaura la música del juego
-                AudioManager.sharedInstance.StopBossMusic();
+           
+        }
+        if (isDefeated)
+        {
+            //Desactivamos al tanque
+            theBoss.gameObject.SetActive(false);
+            //Activamos los objetos tras derrotar al jefe final
+            winPlatform.SetActive(false);
+            //Llamamos al métod que restaura la música del juego
+            AudioManager.sharedInstance.StopBossMusic();
 
-            }
         }
     }
 }

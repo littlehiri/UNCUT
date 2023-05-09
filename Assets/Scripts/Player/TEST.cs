@@ -71,7 +71,7 @@ public class TEST : MonoBehaviour
     }
     void Update()
     {
-
+        
         //jumpInput = Input.GetAxis("Jump");
 
         if (nextFireTime <= 0)
@@ -167,7 +167,21 @@ public class TEST : MonoBehaviour
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            transform.parent = null;
+        }
+    }
 
     private void FixedUpdate()
     {
