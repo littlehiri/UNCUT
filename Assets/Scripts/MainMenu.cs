@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement; //Para cambiar entre escenas
 public class MainMenu : MonoBehaviour
 {
     //Variable para saber la escena a la que queremos ir al principio o al continuar el juego
-    public string startScene, continueScene;
+    public string startScene, selectorNivel;
 
     //Referencia al botón de Continuar
     public GameObject continueButton;
@@ -14,18 +14,18 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Comprobamos si al menos nos hemos pasado el primer nivel, porque eso significa que ya hay un archivo de guardado y podemos continuar partida
-        if (PlayerPrefs.HasKey(startScene + "_unlocked"))
-        {
-            //El botón de guardado se muestra
-            continueButton.SetActive(true);
-        }
-        //Si por el contrario nunca habíamos guardado partida
-        else
-        {
-            //El botón de guardado se esconde
-            continueButton.SetActive(false);
-        }
+        ////Comprobamos si al menos nos hemos pasado el primer nivel, porque eso significa que ya hay un archivo de guardado y podemos continuar partida
+        //if (PlayerPrefs.HasKey(startScene + "_unlocked"))
+        //{
+        //    //El botón de guardado se muestra
+        //    continueButton.SetActive(true);
+        //}
+        ////Si por el contrario nunca habíamos guardado partida
+        //else
+        //{
+        //    //El botón de guardado se esconde
+        //    continueButton.SetActive(false);
+        //}
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour
     public void ContinueGame()
     {
         //Para saltar a la escena que le pasamos en la variable
-        SceneManager.LoadScene(continueScene);
+        SceneManager.LoadScene(selectorNivel);
     }
 
     //Método para el Botón Start
