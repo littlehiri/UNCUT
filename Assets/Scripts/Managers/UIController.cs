@@ -12,6 +12,8 @@ public class UIController : MonoBehaviour
     //Referencias a los sprites que cambiarán al perder o ganar un corazón
     public Sprite heartFull1, heartFull2, heartFull3, heartFull4, heartFull5, heartEmpty1, heartEmpty2, heartEmpty3, heartEmpty4, heartEmpty5;
 
+    public Slider cdLanza;
+
     //Referencia al texto de la UI
     //public TextMeshProUGUI gemText;
 
