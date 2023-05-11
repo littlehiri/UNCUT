@@ -84440,7 +84440,7 @@ GameObject:
   - component: {fileID: 1749976202}
   - component: {fileID: 1749976201}
   m_Layer: 5
-  m_Name: ReloadSlide
+  m_Name: ReloadSpear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
