@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -8,14 +9,18 @@ public class PlayerAttack : MonoBehaviour
 
     private bool attacking = false;
 
-    private float timeToAttack = 0.25f;
+    private float timeToAttack = 0.75f;
     private float timer = 0f;
+    public UnityEvent<float> onReloading;
+
 
     // Start is called before the first frame update
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+        onReloading?.Invoke(timer);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -30,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
         if (attacking)
         {
             timer += Time.deltaTime;
+            onReloading?.Invoke(timer/ timeToAttack);
 
             if (timer >= timeToAttack)
             {

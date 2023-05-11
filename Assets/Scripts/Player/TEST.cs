@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TEST : MonoBehaviour
 {
     public GameObject lanza;
+    public UnityEvent<float> onReloading;
+    
 
     public Transform spawner;
     public GameObject bulletPrefab;
@@ -66,17 +69,18 @@ public class TEST : MonoBehaviour
 
     private void Start()
     {
-        nextFireTime = 2;
+        //nextFireTime = 2;
         //Debug.Log(nextFireTime);
+        onReloading?.Invoke(nextFireTime);
     }
+
+    
+
     void Update()
     {
-        
-        //jumpInput = Input.GetAxis("Jump");
-
         if (nextFireTime <= 0)
         {
-           
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
 
@@ -89,7 +93,9 @@ public class TEST : MonoBehaviour
 
         }
         else
+            onReloading?.Invoke(nextFireTime/cooldownTime);
             nextFireTime -= Time.deltaTime;
+
 
         //Si el juego está pausado, no funciona el movimiento. Tampoco si el jugador está parado
         if (!reference.isPaused && !stopInput)
