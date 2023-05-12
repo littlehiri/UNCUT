@@ -78,6 +78,12 @@ public class TEST : MonoBehaviour
 
     void Update()
     {
+
+        animator.SetFloat("Velocity", Mathf.Abs(theRB.velocity.x));
+
+        animator.SetBool("isGrounded")
+
+
         if (nextFireTime <= 0)
         {
 
@@ -191,52 +197,6 @@ public class TEST : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (horizontal < 0f || horizontal > 0f)
-        {
-            ////animator.SetFloat("Speed", Mathf.Abs(horizontal));
-            ////theSR.flipX = horizontal < 0f;
-            //if (isSwinging)
-            //{
-            //    //animator.SetBool("IsSwinging", true);
-
-            //    // Get normalized direction vector from player to the hook point
-            //    //var playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
-
-            //    // Inverse the direction to get a perpendicular direction
-            //    //Vector2 perpendicularDirection;
-            //    //if (horizontal < 0)
-            //    //{
-            //    //    perpendicularDirection = new Vector2(-playerToHookDirection.y, playerToHookDirection.x);
-            //    //    var leftPerpPos = (Vector2)transform.position - perpendicularDirection * -2f;
-            //    //    Debug.DrawLine(transform.position, leftPerpPos, Color.green, 0f);
-            //    //}
-            //    //else
-            //    //{
-            //    //    perpendicularDirection = new Vector2(playerToHookDirection.y, -playerToHookDirection.x);
-            //    //    var rightPerpPos = (Vector2)transform.position + perpendicularDirection * 2f;
-            //    //    Debug.DrawLine(transform.position, rightPerpPos, Color.green, 0f);
-            //    //}
-
-            //    //var force = perpendicularDirection * swingForce;
-            //    //theRB.AddForce(force, ForceMode2D.Force);
-            //}
-            //else
-            //{
-            //    //animator.SetBool("IsSwinging", false);
-            //    //if (isGrounded)
-            //    //{
-            //    //    var groundForce = speed * 2f;
-            //    //    ////theRB.AddForce(new Vector2((horizontal * groundForce - theRB.velocity.x) * groundForce, 0));
-            //    //    //theRB.velocity = new Vector2(theRB.velocity.x, theRB.velocity.y);
-            //    //}
-            //}
-        }
-        else
-        {
-            //animator.SetBool("IsSwinging", false);
-            animator.SetFloat("Speed", 0f);
-        }
-
        
 
         if (isDashing)
