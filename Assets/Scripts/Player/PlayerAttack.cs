@@ -13,6 +13,8 @@ public class PlayerAttack : MonoBehaviour
     private float timer = 0f;
     public UnityEvent<float> onReloading;
 
+     public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Attack();
-
+            
             AudioManager.sharedInstance.PlaySFX(4);
         }
 

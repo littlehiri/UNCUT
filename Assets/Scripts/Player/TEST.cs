@@ -43,6 +43,7 @@ public class TEST : MonoBehaviour
     public float cooldownTime = 2;
     private float nextFireTime = 0;
 
+
     //Gancho
     public float swingForce = 4f;
     //public bool isSwinging;
@@ -81,7 +82,12 @@ public class TEST : MonoBehaviour
 
         animator.SetFloat("Velocity", Mathf.Abs(theRB.velocity.x));
 
-        animator.SetBool("isGrounded")
+        animator.SetBool("isGrounded", isGrounded);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetTrigger("atacking");
+        }
 
 
         if (nextFireTime <= 0)
@@ -89,7 +95,7 @@ public class TEST : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-
+                animator.SetTrigger("throwing");
                 GameObject bullet = Instantiate(bulletPrefab, spawner.position, bulletPrefab.transform.rotation);
 
                 nextFireTime = 2;

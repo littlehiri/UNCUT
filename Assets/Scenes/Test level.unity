@@ -11063,7 +11063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4879981980630800639, guid: 4ef43b92089f12c4592e127ce1b7a45d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -17.5
+      value: -17.900024
       objectReference: {fileID: 0}
     - target: {fileID: 4879981980630800639, guid: 4ef43b92089f12c4592e127ce1b7a45d, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -98893,6 +98893,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4c2f8deb2724545a6d656c215120e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2060737790 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2060737801, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+  m_PrefabInstance: {fileID: 6808426641491458050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061221810
 GameObject:
   m_ObjectHideFlags: 0
@@ -103347,6 +103352,10 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 2060737788}
+    - target: {fileID: 4641696744644746635, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2060737790}
     - target: {fileID: 4641696744644746635, guid: a5a724cfcb142424b8ffc6aece330bdf, type: 3}
       propertyPath: onReloading.m_PersistentCalls.m_Calls.Array.size
       value: 1
