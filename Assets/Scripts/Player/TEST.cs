@@ -7,7 +7,8 @@ public class TEST : MonoBehaviour
 {
     public GameObject lanza;
     public UnityEvent<float> onReloading;
-    
+
+    public GameObject daga;
 
     public Transform spawner;
     public GameObject bulletPrefab;
@@ -86,7 +87,9 @@ public class TEST : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            
             animator.SetTrigger("atacking");
+            
         }
 
 
@@ -95,6 +98,8 @@ public class TEST : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                
+
                 animator.SetTrigger("throwing");
                 GameObject bullet = Instantiate(bulletPrefab, spawner.position, bulletPrefab.transform.rotation);
 

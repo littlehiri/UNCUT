@@ -10,6 +10,8 @@ public class Pickup : MonoBehaviour
     //Variable para saber si ha sido recogido
     private bool isCollected;
 
+    public GameObject pickupEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +47,7 @@ public class Pickup : MonoBehaviour
                 //Llamamos al sonido de recoger una cura
                 AudioManager.sharedInstance.PlaySFX(6);
                 //Instanciamos el efecto de recoger el item
-                //Instantiate(pickupEffect, transform.position, transform.rotation);//Le pasamos el objeto a instanciar, su posición, su rotación
+                Instantiate(pickupEffect, transform.position, transform.rotation);//Le pasamos el objeto a instanciar, su posición, su rotación
                 //Destruimos el objeto
                 Destroy(gameObject);
             }
@@ -58,7 +60,7 @@ public class Pickup : MonoBehaviour
             //Llamamos al sonido de recoger una cura
             AudioManager.sharedInstance.PlaySFX(6);
             //Instanciamos el efecto de recoger el item
-            //Instantiate(pickupEffect, transform.position, transform.rotation);//Le pasamos el objeto a instanciar, su posición, su rotación
+            Instantiate(pickupEffect, transform.position, transform.rotation);//Le pasamos el objeto a instanciar, su posición, su rotación
             //Destruimos el objeto
             Destroy(gameObject);
         }
